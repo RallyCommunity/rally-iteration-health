@@ -1,7 +1,7 @@
 {
   "_comment": "This file is used by grunt",
-  "name": "tsabc",
-  "version": "0.1.0",
+  "name": "rally-iteration-health",
+  "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
