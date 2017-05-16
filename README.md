@@ -1,4 +1,4 @@
-#Rally Iteration Health
+# Rally Iteration Health
 
 Measures health metrics for an iteration.   
 
@@ -10,69 +10,69 @@ Task Churn can be hidden via the App Settings.
 
 ![ScreenShot](/images/rally-iteration-health.png)
   
-##Metric Definitions:  
+## Metric Definitions:  
 
 ### Scope Churn and Direction
 Churn is a measure of the change in the iteration's scope.
 
 Churn Direction (+/-) is an indicator of the general direction of scope change.  Churn is defined as a standard deviation, which is always zero or positive, so this added indicator provides an indication of whether scope tended to be added or removed
 
-####How it is calculated
+#### How it is calculated
 Churn is defined as the standard deviation of the total scheduled into the sprint divided by the average daily total.
 
 Churn Direction is determined by examining every day's change from the day before and adding or subtracting the delta to determine whether scope has been added more often than subtracted. (The first day of the iteration is excluded from this calculation.
 
-###Percentage of Task Removal at Iteration End
+### Percentage of Task Removal at Iteration End
 Indicates when tasks have been added or removed on the last day of the iteration.  If a significant percentage of tasks are removed, it could be an indicator that the team is moving committed work items to another iteration.
 
-####How it is calculated
+#### How it is calculated
 The number of estimated hours for the tasks scheduled in the iteration on the last day are subtracted from the total estimated hours of tasks scheduled on the next-to-last day, then divided by the next-to-last-day totals to create a percentage.  Note that this is calculated from the <b>estimates</b> of all the tasks, not the hours remaining to-do.
 
 ### Days  
 The number of full days in the iteration (Excluding weekends)
 
-###Percent Estimated
+### Percent Estimated
 Represents the ratio of work items (stories and defects) that have estimates.
 
-####How it is calculated
+#### How it is calculated
 Divide the number of work items (stories and defects) in the iteration that have a plan estimate that is not null by the total number of items in the iteration multiplied by 100. 
 Stories that have a PlanEstimate = 0 (not null) will be counted as estimated.   
         
-####Coaching Tip
+#### Coaching Tip
 If there is a very high percentage or stories without estimates, other measures will not be meaningful.  This is really only useful for the beginning of an iteration, and perhaps for an iteration in early flight, but not for an iteration that has ended.  The idea is to catch this early in an iteration so other charts/graphs etc are useful for teams.  A good practice is to have a ready backlog as and entrance criteria to an iteration planning session, a ready backlog means three things, sized, ranked, and stories are elaborated sufficiently with acceptance criteria to enable conversation and confirmation during planning.
 
-###Last Day Acceptance Ratio
+### Last Day Acceptance Ratio
 Indicates whether teams met their commitment, assuming work items have not been removed from the iteration. 
 
-####How it is calculated
+#### How it is calculated
 Divide the plan estimates of the work items in the iteration that were accepted on the last day of the iteration by the total plan estimate of all work items in the iteration.  If analysis type is set to 'counts', the calculation is based on the number of work items, not the plan estimate of the work items.
 
-###Average Daily In-Progress Percentage
+### Average Daily In-Progress Percentage
 This is an indication of how much work is in progress (WIP).  It is the ratio of the average of the work items in the in-Progress state on a daily basis. 
 
-####How it is calculated
+#### How it is calculated
 Divide the plan estimate of all the work items in the 'in-progress' state by the total plan estimate of the work items in the iteration, divided by the number of days.  If the iteration is in-flight, we'll divide by the number of days so far.   If analysis type is set to counts, the calculation is based on the count of the work items, not the plan estimate of the work items.
 
 If there are no plan estimate totals for an item on one day, the in progress ratio is calculated as 0 for that day.  This means that if there are no work items in a sprint for the first 5 days of the sprint, the average of in-progress items will include those days where there were no items in the sprint.          
         
-####Coaching Tip
+#### Coaching Tip
 A high percentage here would mean that there is a high degree of daily WIP on average.  Keeping WIP small, reduces context switching and helps team focus on the most important items to reach acceptance.
     
-###Last Day Completion Ratio
+### Last Day Completion Ratio
 Represents the ratio of work completed by iteration end.  A low percentage might imply that there is work planned into an iteration that was left in a schedule state lower than completed.
 
-####How it is calculated
+#### How it is calculated
 Divide the plan estimates of the work items in the iteration that are in a schedule state that is Completed or higher at the end of the last day of the iteration by the total plan estimate of all work items in the iteration. If analysis type is set to 'counts', the calculation is based on the count of the work items, not the plan estimate of the work items.
 
-###Percentage of Task Removal At the end of the sprint
+### Percentage of Task Removal At the end of the sprint
 This shows the percentage of task estimate that is removed from the 2nd to last day of the sprint to the last day of the sprint.  
 
 No Data means that there were never any estimated tasks in the sprint.  A task churn of 0% could mean that the task removal didn't change on the last 2 days, or that tasks were removed prior to the last day of the sprint.  
 
-###Velocity Variance
+### Velocity Variance
 This shows the % variance of the velocity from the average of the past 3 sprints. If there is only data from less than that, then that data will be used.  Otherwise the velocity variance will show as No Data.  The velocities used in this calculation is the current velocity, which is calculated by adding all stories associated with the iteration as of the current date.
 
-###Cycle Time
+### Cycle Time
 This shows the average cycle time of stories in the sprint. This can be configured from the App Settings... menu.  There are up to three options:
 
   * **No** : Do not show cycle time
@@ -81,12 +81,12 @@ This shows the average cycle time of stories in the sprint. This can be configur
       In-Progress (or higher) to the last transition to Completed (or higher).  Does NOT consider if moves left of In-Progress after first hit.
 
 
-###Show Local Date
+### Show Local Date
 Check this box to show sprint beginning and end date in the browser's local time.  Otherwise show it in the workspace's default.  
 When the workspace is in a timezone to the west of the user's timezone, local time can be a day later than would be shown in workspace
 timezone.
 
-###Show Say:Do Ratio
+### Show Say:Do Ratio
 This box should only be available when lookback is available.  Check this box to calculate the say/do ratio: The app will 
 review the list of items assigned to the iteration on the first day and the items assigned on the last day.  Those items that
 were there on the first day and are still in the iteration & have been accepted will be divided by the items that were on the 
@@ -142,7 +142,7 @@ you're going to need to have these installed:
                                                                             
 ### Usage of the grunt file
 
-####Tasks
+#### Tasks
                                                                                 
 ##### grunt debug
   Use grunt debug to create the debug html file.  You only need to 
