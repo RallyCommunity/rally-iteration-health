@@ -689,7 +689,7 @@ Ext.define("rally-iteration-health", {
             iterationOids = [];
 
         _.each(projectIterationHash, function(recs, project){
-            iterationOids = iterationOids.concat(_.map(recs, function(r){ return r.ObjectID; }).slice(0,num_iterations-1));
+            iterationOids = iterationOids.concat(_.map(recs, function(r){ return r.ObjectID; }).slice(0,num_iterations));
         });
 
         store.filterBy(function(item){
